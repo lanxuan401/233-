@@ -5,12 +5,13 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "eslint --ext .js,.vue src",
+    "lint": "eslint --ext .js,.vue src --fix",
     "format": "prettier --write \"src/**/*.{js,vue,json,css,scss,html,md}\""
   },
   "dependencies": {
     "core-js": "^3.8.3",
-    "vue": "^2.6.14"
+    "vue": "^2.6.14",
+    "vue-router": "^3.6.5"
   },
   "devDependencies": {
     "@babel/core": "^7.26.10",
@@ -22,6 +23,8 @@
     "eslint-config-prettier": "^10.1.2",
     "eslint-plugin-prettier": "^5.2.6",
     "eslint-plugin-vue": "^8.0.3",
+    "less": "^4.3.0",
+    "less-loader": "^12.3.0",
     "prettier": "^3.5.3",
     "vue-template-compiler": "^2.6.14"
   },
@@ -32,12 +35,15 @@
     },
     "extends": [
       "plugin:vue/essential",
-      "eslint:recommended"
+      "eslint:recommended",
+      "plugin:prettier/recommended"
     ],
     "parserOptions": {
       "parser": "@babel/eslint-parser"
     },
-    "rules": {}
+    "rules": {
+      "space-before-blocks": "off"
+    }
   },
   "browserslist": [
     "> 1%",
